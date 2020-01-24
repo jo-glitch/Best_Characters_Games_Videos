@@ -1,6 +1,6 @@
 $(function(){
     
-    var $mainMenuItems = $("#main-menu ul").children("li"),
+    let $mainMenuItems = $("#main-menu ul").children("li"),
         totalMainMenuItems = $mainMenuItems.length,
         openedIndex = 2,
         
@@ -15,7 +15,7 @@ $(function(){
         bindEvents = function(){
              $mainMenuItems.children(".images").click(function(){
                
-                var newIndex = $(this).parent().index();
+                let newIndex = $(this).parent().index();
                 checkAndAnimateItem(newIndex);
                 
             });
@@ -45,7 +45,7 @@ $(function(){
         };
     
     animateItem = function($item, toOpen, speed){
-       var $colorImage = $item.find(".color"),
+       let $colorImage = $item.find(".color"),
            itemParam = toOpen ? {width:"420px"}:{width: "140px"},
            colorImageParam = toOpen ? {left:"0px"}:{width: "140px"};
            $colorImage.animate(colorImageParam,speed);
